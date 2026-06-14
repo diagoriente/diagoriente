@@ -1,0 +1,16 @@
+# moon
+.moon/cache
+.moon/docker
+.moon/hooks
+
+# dependencies
+node_modules/
+
+# build output
+coverage
+dist
+
+# env files
+.env
+.env.local
+.env.*.local
