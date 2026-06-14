@@ -6,7 +6,8 @@
   "devDependencies": {
     "@commitlint/cli": "^21.0.2",
     "@commitlint/config-conventional": "^21.0.2",
-    "@commitlint/types": "^21.0.1"
+    "@commitlint/types": "^21.0.1",
+    "oxfmt": "^0.54.0"
   },
   "packageManager": "pnpm@11.6.0"
 }

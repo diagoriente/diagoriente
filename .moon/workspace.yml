@@ -6,5 +6,7 @@ vcs:
   defaultBranch: "master"
   provider: "github"
   hooks:
+    pre-commit:
+      - "pnpm exec oxfmt"
     commit-msg:
       - "pnpm exec commitlint --edit $ARG1"
