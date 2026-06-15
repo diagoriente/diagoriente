@@ -2,6 +2,8 @@ moon = "2.3.4"
 node = "26.3.1"
 pnpm = "11.8.0"
 aspire = "13.4.4"
+dotnet = "10.0.100"
 
 [plugins.tools]
 aspire = "https://raw.githubusercontent.com/id6tm/proto-plugins/master/aspire/plugin.toml"
+dotnet = "https://raw.githubusercontent.com/RemiKalbe/proto-dotnet-plugin/main/plugin.toml"

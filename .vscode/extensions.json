@@ -1,3 +1,8 @@
 {
-  "recommendations": ["moonrepo.moon-console", "oxc.oxc-vscode", "vitest.explorer"]
+  "recommendations": [
+    "moonrepo.moon-console",
+    "oxc.oxc-vscode",
+    "vitest.explorer",
+    "microsoft-aspire.aspire-vscode"
+  ]
 }
