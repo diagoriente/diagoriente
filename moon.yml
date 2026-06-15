@@ -1,0 +1,16 @@
+stack: "infrastructure"
+layer: "configuration"
+
+tasks:
+  lint:
+    command: "oxlint --disable-nested-config"
+
+  lint-fix:
+    command: "oxlint --disable-nested-config --fix"
+    options:
+      runInCI: false
+
+  format:
+    command: "oxfmt --disable-nested-config"
+    options:
+      runInCI: false
