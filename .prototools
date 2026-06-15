@@ -1,3 +1,7 @@
 moon = "2.3.4"
 node = "26.3.1"
 pnpm = "11.8.0"
+aspire = "13.4.4"
+
+[plugins.tools]
+aspire = "https://raw.githubusercontent.com/id6tm/proto-plugins/master/aspire/plugin.toml"
