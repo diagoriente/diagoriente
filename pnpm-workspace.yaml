@@ -3,4 +3,5 @@ configDependencies:
   "@pnpm/plugin-trusted-deps": 0.2.2
 
 packages:
-  - "packages/*"
+  - "apps/*"
+  - "packages/**"
