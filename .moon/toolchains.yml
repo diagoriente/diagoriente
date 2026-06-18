@@ -1,7 +1,7 @@
-$schema: "./cache/schemas/toolchains.json"
+$schema: './cache/schemas/toolchains.json'
 
 javascript:
-  packageManager: "pnpm"
+  packageManager: 'pnpm'
   syncPackageManagerField: true
   syncProjectWorkspaceDependencies: true
 
@@ -10,7 +10,7 @@ node: {}
 pnpm: {}
 
 typescript:
-  rootConfigFileName: "tsconfig.json"
-  rootOptionsConfigFileName: "tsconfig.options.json"
+  rootConfigFileName: 'tsconfig.json'
+  rootOptionsConfigFileName: 'tsconfig.options.json'
   routeOutDirToCache: false
   syncProjectReferences: true

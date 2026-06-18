@@ -1,33 +1,33 @@
 $schema: ../cache/schemas/tasks.json
 
 inheritedBy:
-  tag: "vite"
+  tag: 'vite'
 
 fileGroups:
   vite:
-    - "public/**/*"
-    - "src/**/*"
-    - "vite.config.*"
+    - 'public/**/*'
+    - 'src/**/*'
+    - 'vite.config.*'
   sources: []
 
 tasks:
   build:
-    description: "Build the application"
-    command: "vite build"
+    description: 'Build the application'
+    command: 'vite build'
     inputs:
-      - "@group(vite)"
-      - "@group(sources)"
+      - '@group(vite)'
+      - '@group(sources)'
     outputs:
-      - "dist/**/*"
+      - 'dist/**/*'
 
   dev:
-    description: "Run the development server"
-    command: "vite dev"
+    description: 'Run the development server'
+    command: 'vite dev'
     preset: server
 
   preview:
-    description: "Preview the built application"
-    command: "vite preview"
+    description: 'Preview the built application'
+    command: 'vite preview'
     deps:
-      - "~:build"
+      - '~:build'
     preset: server

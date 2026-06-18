@@ -1,17 +1,17 @@
-$schema: "./cache/schemas/workspace.json"
+$schema: './cache/schemas/workspace.json'
 
 projects:
   globs:
-    - "apps/*"
-    - "packages/**/moon.yml"
+    - 'apps/*'
+    - 'packages/**/moon.yml'
   sources:
-    root: "."
+    root: '.'
 
 vcs:
-  defaultBranch: "master"
-  provider: "github"
+  defaultBranch: 'master'
+  provider: 'github'
   hooks:
     pre-commit:
-      - "pnpm exec oxfmt"
+      - 'pnpm exec oxfmt'
     commit-msg:
-      - "pnpm exec commitlint --edit $ARG1"
+      - 'pnpm exec commitlint --edit $ARG1'
