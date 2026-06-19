@@ -3,14 +3,30 @@
 .moon/docker
 .moon/hooks
 
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
 # dependencies
 node_modules/
 
 # build output
 coverage
 dist
+*.tsbuildinfo
+
+# macOS
+.DS_Store
+
+# JetBrains
+.idea/
 
 # env files
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
