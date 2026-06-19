@@ -14,3 +14,6 @@ tasks:
     command: 'oxfmt --disable-nested-config'
     options:
       runInCI: false
+
+  format-check:
+    command: 'oxfmt --disable-nested-config --check'
