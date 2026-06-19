@@ -3,17 +3,17 @@ layer: 'configuration'
 
 tasks:
   lint:
-    command: 'oxlint --disable-nested-config'
+    command: 'oxlint'
 
   lint-fix:
-    command: 'oxlint --disable-nested-config --fix'
+    command: 'oxlint --fix'
     options:
       runInCI: false
 
   format:
-    command: 'oxfmt --disable-nested-config'
+    command: 'oxfmt'
     options:
       runInCI: false
 
   format-check:
-    command: 'oxfmt --disable-nested-config --check'
+    command: 'oxfmt --check'
