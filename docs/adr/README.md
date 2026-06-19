@@ -11,4 +11,4 @@ We manage our ADRs using [@id6tm/madr-tools](https://github.com/id6tm/madr-tools
 
 ## Documented Decisions
 
-**No ADR issued at the moment.**
+- [ADR-0001](0001-use-madr-for-architectural-decisions.md) — Use MADR for Architectural Decisions
