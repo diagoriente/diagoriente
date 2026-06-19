@@ -48,6 +48,9 @@ importers:
       '@commitlint/types':
         specifier: ^21.0.1
         version: 21.0.1
+      '@id6tm/madr-tools':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@types/node':
         specifier: ^25.9.3
         version: 25.9.3
@@ -151,6 +154,35 @@ packages:
         optional: true
       conventional-commits-parser:
         optional: true
+
+  '@id6tm/madr-tools-darwin-arm64@1.0.0':
+    resolution: {integrity: sha512-F3S11rHpL0uuu/ZEgA6GNkCQnrSVWKTM9+Qb2OJZLf0FnHKmhuxIFg45DAGafJx26QHpXDzcR/uiPC1k6u6Bcw==}
+    cpu: [arm64]
+    os: [darwin]
+    hasBin: true
+
+  '@id6tm/madr-tools-linux-arm64@1.0.0':
+    resolution: {integrity: sha512-gWDLe40qqiXIm5P4rwy4/z+yMU2GPw//XSz/F5LDQL1pXhfenz5kB+F9rCd6n1+vpX23dZ4DXCa7xPqt7b51tg==}
+    cpu: [arm64]
+    os: [linux]
+    hasBin: true
+
+  '@id6tm/madr-tools-linux-x64@1.0.0':
+    resolution: {integrity: sha512-HfdpC1o9ljCbuni27VJQH2WtHScbLlOSDOY8P/WBfm8WiQMiN0hyv/7PP9XxKOxhqkj+6vi+Awn51mbOS38c/Q==}
+    cpu: [x64]
+    os: [linux]
+    hasBin: true
+
+  '@id6tm/madr-tools-win32-x64@1.0.0':
+    resolution: {integrity: sha512-2jzbUwcmqg4RBS8C4wx8LZAVS1wZwd14DAQBAXA/tyXmcsZ6Q62xgio+UeX4Es+jU/5Rt/k+qL2KmWyc+1Qn1A==}
+    cpu: [x64]
+    os: [win32]
+    hasBin: true
+
+  '@id6tm/madr-tools@1.0.0':
+    resolution: {integrity: sha512-DUN1tt3hg01+Jb9rQXMhtFNEyQSy+gnyqIDzV7Qs5dqAOWWY/MvYzu/6w/faXYIR0IDyT8KZcvPk/t4rolUEvA==}
+    engines: {node: '>=18'}
+    hasBin: true
 
   '@oxfmt/binding-android-arm-eabi@0.55.0':
     resolution: {integrity: sha512-+rFDOqQe5LOWgxrAJaZgLRudr6GQm0wGI6gtu7vVkrdLGjNMUSGbAlaCr8j7F2H2Er97vYQCU8WDb30onqMM1g==}
@@ -771,6 +803,25 @@ snapshots:
       semver: 7.8.4
     optionalDependencies:
       conventional-commits-parser: 6.4.0
+
+  '@id6tm/madr-tools-darwin-arm64@1.0.0':
+    optional: true
+
+  '@id6tm/madr-tools-linux-arm64@1.0.0':
+    optional: true
+
+  '@id6tm/madr-tools-linux-x64@1.0.0':
+    optional: true
+
+  '@id6tm/madr-tools-win32-x64@1.0.0':
+    optional: true
+
+  '@id6tm/madr-tools@1.0.0':
+    optionalDependencies:
+      '@id6tm/madr-tools-darwin-arm64': 1.0.0
+      '@id6tm/madr-tools-linux-arm64': 1.0.0
+      '@id6tm/madr-tools-linux-x64': 1.0.0
+      '@id6tm/madr-tools-win32-x64': 1.0.0
 
   '@oxfmt/binding-android-arm-eabi@0.55.0':
     optional: true
