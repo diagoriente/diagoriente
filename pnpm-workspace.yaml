@@ -2,6 +2,13 @@ configDependencies:
   '@pnpm/plugin-better-defaults': 0.3.0
   '@pnpm/plugin-trusted-deps': 0.2.2
 
+minimumReleaseAgeExclude:
+  - '@id6tm/madr-tools-darwin-arm64@1.2.1'
+  - '@id6tm/madr-tools-linux-arm64@1.2.1'
+  - '@id6tm/madr-tools-linux-x64@1.2.1'
+  - '@id6tm/madr-tools-win32-x64@1.2.1'
+  - '@id6tm/madr-tools@1.2.1'
+
 packages:
   - 'apps/*'
   - 'packages/**'

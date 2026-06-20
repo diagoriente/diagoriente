@@ -1,8 +1,11 @@
-# {{title}}
+# {{ title }}
 
 - **Status:** [Proposed | Accepted | Superseded]
-- **Date:** {{date}}
+- **Date:** {{ date }}
 - **Deciders:** [Name 1, Name 2, Name 3]
+{% if supersedes %}
+- **Supersedes:** {% for adr in supersedes %}[{{ adr.id }}]({{ adr.link }}){% if not loop.last %}, {% endif %}{% endfor %}
+{% endif %}
 
 ## Context and Problem Statement
 
@@ -25,9 +28,9 @@
 
 ### Consequences
 
-- Good, because [What gets easier/better?]
-- Neutral, because [What paradigm shift are we accepting?]
-- Bad, because [What debt or friction are we accepting?]
+- Good, because [what gets easier or better].
+- Bad, because [what debt or friction are we accepting].
+- Neutral, because [what changes without being clearly good or bad].
 
 ## Links
 
