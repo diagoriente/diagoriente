@@ -20,17 +20,17 @@ jobs:
     runs-on: 'ubuntu-latest'
 
     steps:
-      - uses: 'actions/checkout@v6'
+      - uses: 'actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0' # v7.0.0
         with:
           fetch-depth: 0
 
-      - uses: 'moonrepo/setup-toolchain@v0'
+      - uses: 'moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095' # v0.6.4
         with:
           auto-install: true
 
       - run: 'moon ci --color'
 
-      - uses: 'moonrepo/run-report-action@v1'
+      - uses: 'moonrepo/run-report-action@bbe7e99bf2aca819ec660ec01fc59d84bdd492d6' # v1.10.0
         if: success() || failure()
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
