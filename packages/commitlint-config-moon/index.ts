@@ -1,4 +1,4 @@
-import { RuleConfigSeverity } from '@commitlint/types';
+import { type RuleConfigContext, RuleConfigSeverity } from '@commitlint/types';
 import { execSync } from 'node:child_process';
 
 function getProjects() {
@@ -18,6 +18,10 @@ function getProjects() {
 export default {
   utils: { getProjects },
   rules: {
-    'scope-enum': [RuleConfigSeverity.Error, 'always', [...getProjects()]],
+    'scope-enum': (_ctx: RuleConfigContext) => [
+      RuleConfigSeverity.Error,
+      'always',
+      [...getProjects()],
+    ],
   },
 };
