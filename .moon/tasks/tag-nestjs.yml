@@ -1,0 +1,35 @@
+$schema: ../cache/schemas/tasks.json
+
+inheritedBy:
+  tag: 'nestjs'
+
+tasks:
+  dev:
+    command: 'nest start --debug --watch'
+    preset: server
+
+  build:
+    command: 'nest build'
+    outputs:
+      - 'dist'
+
+  preview:
+    command: 'node dist/main.js'
+    dependsOn:
+      - '~:build'
+    preset: server
+
+  test:
+    command: 'vitest run'
+
+  test-cov:
+    command: 'vitest run --coverage'
+    outputs:
+      - 'coverage/**/*'
+
+  test-watch:
+    command: 'vitest watch'
+    preset: server
+
+  e2e:
+    command: 'vitest run --config ./vitest.config.e2e.ts'
