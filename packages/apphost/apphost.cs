@@ -1,5 +1,5 @@
-﻿#:package Aspire.Hosting.PostgreSQL@13.4.4
-#:sdk Aspire.AppHost.Sdk@13.4.4
+﻿#:package Aspire.Hosting.PostgreSQL@13.4.6
+#:sdk Aspire.AppHost.Sdk@13.4.6
 
 var builder = DistributedApplication.CreateBuilder(args);
 
