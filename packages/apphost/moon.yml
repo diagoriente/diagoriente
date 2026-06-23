@@ -5,3 +5,8 @@ language: csharp
 project:
   title: 'Aspire AppHost'
   description: 'Aspire app orchestrator for managing distributed services'
+
+tasks:
+  dev:
+    command: 'aspire run'
+    preset: server
