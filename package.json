@@ -11,7 +11,7 @@
     "@types/node": "^26.0.0",
     "@vitest/coverage-v8": "^4.1.9",
     "@vitest/ui": "^4.1.9",
-    "oxfmt": "^0.55.0",
+    "oxfmt": "0.56.0",
     "oxlint": "^1.71.0",
     "typescript": "^6.0.3",
     "vitest": "^4.1.9"
