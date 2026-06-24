@@ -33,8 +33,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-pnpmfileChecksum: sha256-N7laNYP2CXS7+nB5oMe9h8qCjKustgiZJgJjgIdc4SE=
-
 importers:
 
   .:
@@ -49,28 +47,28 @@ importers:
         specifier: 21.1.0
         version: 21.1.0
       '@id6tm/madr-tools':
-        specifier: ^1.2.1
+        specifier: 1.2.1
         version: 1.2.1
       '@types/node':
-        specifier: ^26.0.0
+        specifier: 26.0.0
         version: 26.0.0
       '@vitest/coverage-v8':
-        specifier: ^4.1.9
+        specifier: 4.1.9
         version: 4.1.9(vitest@4.1.9)
       '@vitest/ui':
-        specifier: ^4.1.9
+        specifier: 4.1.9
         version: 4.1.9(vitest@4.1.9)
       oxfmt:
         specifier: 0.56.0
         version: 0.56.0
       oxlint:
-        specifier: ^1.71.0
+        specifier: 1.71.0
         version: 1.71.0
       typescript:
-        specifier: ^6.0.3
+        specifier: 6.0.3
         version: 6.0.3
       vitest:
-        specifier: ^4.1.9
+        specifier: 4.1.9
         version: 4.1.9(@types/node@26.0.0)(@vitest/coverage-v8@4.1.9)(@vitest/ui@4.1.9)(vite@8.0.16(@types/node@26.0.0)(jiti@2.6.1))
 
 packages:

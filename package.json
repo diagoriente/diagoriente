@@ -7,14 +7,14 @@
     "@commitlint/cli": "21.1.0",
     "@commitlint/config-conventional": "21.1.0",
     "@commitlint/types": "21.1.0",
-    "@id6tm/madr-tools": "^1.2.1",
-    "@types/node": "^26.0.0",
-    "@vitest/coverage-v8": "^4.1.9",
-    "@vitest/ui": "^4.1.9",
+    "@id6tm/madr-tools": "1.2.1",
+    "@types/node": "26.0.0",
+    "@vitest/coverage-v8": "4.1.9",
+    "@vitest/ui": "4.1.9",
     "oxfmt": "0.56.0",
-    "oxlint": "^1.71.0",
-    "typescript": "^6.0.3",
-    "vitest": "^4.1.9"
+    "oxlint": "1.71.0",
+    "typescript": "6.0.3",
+    "vitest": "4.1.9"
   },
   "packageManager": "pnpm@11.9.0"
 }
