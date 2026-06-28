@@ -1,39 +1,8 @@
----
-lockfileVersion: '9.0'
-
-importers:
-
-  .:
-    configDependencies:
-      '@pnpm/plugin-better-defaults':
-        specifier: 0.3.0
-        version: 0.3.0
-      '@pnpm/plugin-trusted-deps':
-        specifier: 0.2.2
-        version: 0.2.2
-
-packages:
-
-  '@pnpm/plugin-better-defaults@0.3.0':
-    resolution: {integrity: sha512-J500v1tfdFlKXkvO0ivkwJlrTiKNa+2Yb6aX01719FPnH2fGuf9we0ObZRB3OoTetWEChLudHglNDYl7Z3+mLQ==}
-
-  '@pnpm/plugin-trusted-deps@0.2.2':
-    resolution: {integrity: sha512-+ZupiXKJhW2fbSilfyRp+wrAY54MKg+c0JWSFGdeb/y9bUoYN5u4XLOZ0Txk7O2bBa6NMhWrX5mwmsHP3/nm9Q==}
-
-snapshots:
-
-  '@pnpm/plugin-better-defaults@0.3.0': {}
-
-  '@pnpm/plugin-trusted-deps@0.2.2': {}
-
----
 lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
-
-pnpmfileChecksum: sha256-N7laNYP2CXS7+nB5oMe9h8qCjKustgiZJgJjgIdc4SE=
 
 importers:
 
