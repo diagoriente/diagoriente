@@ -1,0 +1,6 @@
+{
+  "name": "@diagoriente/commitlint-config-moon",
+  "private": true,
+  "type": "module",
+  "main": "index.ts"
+}
