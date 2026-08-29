@@ -1,0 +1,65 @@
+language: typescript
+layer: application
+stack: backend
+
+fileGroups:
+  configs:
+    - "nest-cli.json"
+    - "tsconfig*.json"
+    - "vitest.config*.ts"
+  sources:
+    - "src/**/*"
+  tests:
+    - "test/**/*"
+    - "src/**/*.spec.ts"
+    - "src/**/*.test.ts"
+
+tasks:
+  dev:
+    command: "nest start --watch"
+    preset: server
+
+  debug:
+    command: "nest start --debug --watch"
+    preset: server
+
+  build:
+    command: "nest build"
+    inputs:
+      - "@group(sources)"
+      - "@group(configs)"
+    outputs:
+      - "dist/"
+
+  start:
+    command: "node dist/main"
+    deps:
+      - "build"
+    preset: server
+
+  test:
+    command: "vitest run"
+    inputs:
+      - "@group(sources)"
+      - "@group(tests)"
+      - "@group(configs)"
+
+  test-watch:
+    command: "vitest"
+    preset: server
+
+  test-cov:
+    command: "vitest run --coverage"
+    inputs:
+      - "@group(sources)"
+      - "@group(tests)"
+      - "@group(configs)"
+    outputs:
+      - "coverage"
+
+  test-e2e:
+    command: "vitest run --config vitest.config.e2e.ts"
+    inputs:
+      - "@group(sources)"
+      - "@group(tests)"
+      - "@group(configs)"
