@@ -10,7 +10,8 @@
     "@nestjs/swagger": "^12.0.1",
     "@scalar/nestjs-api-reference": "^1.2.17",
     "reflect-metadata": "^0.2.2",
-    "rxjs": "^7.8.2"
+    "rxjs": "^7.8.2",
+    "zod": "^4.5.1"
   },
   "devDependencies": {
     "@nestjs/cli": "^12.0.0",
