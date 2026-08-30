@@ -1,0 +1,7 @@
+[mcp_servers.moon]
+command = "moon"
+args = ["mcp"]
+id = ""
+
+[mcp_servers.moon.env]
+MOON_WORKSPACE_ROOT = "."

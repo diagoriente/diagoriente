@@ -9,7 +9,14 @@ targets:
 
 dependencies:
   apm: []
-  mcp: []
+  mcp:
+    - name: "moon"
+      registry: false
+      transport: stdio
+      command: "moon"
+      args: ["mcp"]
+      env:
+        MOON_WORKSPACE_ROOT: .
 
 includes: auto
 scripts: {}

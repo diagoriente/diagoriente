@@ -1,0 +1,29 @@
+lockfile_version: '1'
+generated_at: '2026-08-30T08:16:13.537564+00:00'
+apm_version: 0.28.0
+dependencies: []
+deployments:
+- kind: uri
+  target: mcp
+  value: moon
+  runtime: codex
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+mcp_servers:
+- moon
+mcp_configs:
+  moon:
+    name: moon
+    transport: stdio
+    env:
+      MOON_WORKSPACE_ROOT: .
+    args:
+    - mcp
+    registry: false
+    command: moon
+mcp_target_servers:
+  codex:
+  - moon
