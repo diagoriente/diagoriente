@@ -1,0 +1,35 @@
+name = "Agent Package Manager"
+type = "cli"
+
+[platform.linux]
+archs = ["x86_64", "aarch64"]
+archive-prefix = "apm-linux-{arch}"
+checksum-file = "apm-linux-{arch}.tar.gz.sha256"
+download-file = "apm-linux-{arch}.tar.gz"
+
+[platform.macos]
+archs = ["x86_64", "aarch64"]
+archive-prefix = "apm-darwin-{arch}"
+checksum-file = "apm-darwin-{arch}.tar.gz.sha256"
+download-file = "apm-darwin-{arch}.tar.gz"
+
+[platform.windows]
+archs = ["x86_64"]
+archive-prefix = "apm-windows-x86_64"
+checksum-file = "apm-windows-x86_64.zip.sha256"
+download-file = "apm-windows-x86_64.zip"
+
+[install]
+download-url = "https://github.com/microsoft/apm/releases/download/v{version}/{download_file}"
+checksum-url = "https://github.com/microsoft/apm/releases/download/v{version}/{checksum_file}"
+
+[install.arch]
+aarch64 = "arm64"
+
+[install.exes.apm]
+exe-path = "apm"
+primary = true
+
+[resolve]
+git-url = "https://github.com/microsoft/apm"
+version-pattern = "^v?(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)"
