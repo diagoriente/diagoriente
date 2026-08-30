@@ -3,7 +3,8 @@
   "extends": ["../../.oxlintrc.json"],
   "rules": {
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-floating-promises": "warn"
+    "@typescript-eslint/no-floating-promises": "warn",
+    "typescript/no-extraneous-class": ["warn", { "allowWithDecorator": true }]
   },
   "env": {
     "node": true
