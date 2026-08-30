@@ -6,6 +6,7 @@ version: 0.0.0
 # Accepted values: agent-skills, antigravity, claude, codex, copilot, cursor, gemini, grok-build, kiro, opencode, windsurf
 targets:
   - codex
+  - claude
 
 dependencies:
   apm:
