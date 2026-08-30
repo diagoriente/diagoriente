@@ -5,3 +5,10 @@ id = ""
 
 [mcp_servers.moon.env]
 MOON_WORKSPACE_ROOT = "."
+
+[mcp_servers.aspire]
+command = "aspire"
+args = ["agent", "mcp"]
+id = ""
+
+[mcp_servers.aspire.env]

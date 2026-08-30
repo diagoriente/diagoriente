@@ -8,7 +8,8 @@ targets:
   - codex
 
 dependencies:
-  apm: []
+  apm:
+    - microsoft/aspire-skills#e9725ad3acb28c01c77b4afba7ec87fbfaa7e21a
   mcp:
     - name: "moon"
       registry: false
@@ -17,6 +18,11 @@ dependencies:
       args: ["mcp"]
       env:
         MOON_WORKSPACE_ROOT: .
+    - name: "aspire"
+      registry: false
+      transport: stdio
+      command: "aspire"
+      args: ["agent", "mcp"]
 
 includes: auto
 scripts: {}
