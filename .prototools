@@ -2,6 +2,8 @@ moon = "2.5.3"
 node = "26.8.1"
 pnpm = "12.1.0"
 apm = "0.29.0"
+aspire = "13.5.3"
 
 [plugins.tools]
 apm = "file://./tools/proto-plugins/apm/plugin.toml"
+aspire = "file://./tools/proto-plugins/aspire/plugin.toml"
