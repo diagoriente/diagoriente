@@ -1,0 +1,55 @@
+language: "en-US"
+
+reviews:
+  profile: assertive
+  high_level_summary_instructions: |
+    Summarize the intent, important implementation changes, affected projects,
+    breaking changes, and deployment considerations. Keep the summary concise.
+  # Keep the PR description author-controlled and avoid generated content mixed with the template.
+  high_level_summary_in_walkthrough: true
+  # Avoid adding visual noise to reviews that do not benefit from a sequence diagram.
+  # Request one in the PR with: @coderabbitai generate sequence diagram
+  sequence_diagrams: false
+  # Avoid non-essential progress messages interrupting the review conversation.
+  in_progress_fortune: false
+  # Keep the review professional and focused on actionable engineering feedback.
+  poem: false
+  # Keep approval decisions with human reviewers while CodeRabbit is being calibrated.
+  request_changes_workflow: false
+
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/dist/**"
+    - "!**/coverage/**"
+    - "!**/*.lock"
+    - "!**/*.lock.yaml"
+    - "!**/.DS_Store"
+    - "!**/.idea/**"
+
+  path_instructions:
+    - path: "**/*.ts"
+      instructions: |
+        Review for correctness, maintainability, clear module boundaries, and meaningful tests.
+        Avoid comments about personal style when the existing repository conventions are already followed.
+    - path: "apps/**"
+      instructions: |
+        Check changes against the nearest AGENTS.md instructions.
+        Consider effects on shared code, dependent applications, public contracts, configuration, and deployment.
+    - path: "apphost.cs"
+      instructions: |
+        Treat changes to resources, endpoints, environment variables, references, and data persistence as infrastructure changes.
+        Check that affected applications and local development workflows remain consistent.
+    - path: ".prototools"
+      instructions: |
+        Treat toolchain version changes as repository-wide changes.
+        Check compatibility with the workspace and update related documentation only when necessary.
+    - path: "tools/proto-plugins/**/*.toml"
+      instructions: |
+        Check download URLs, checksums, executable paths, supported platforms, and version patterns against the upstream release format.
+
+  pre_merge_checks:
+    title:
+      mode: warning
+      requirements: |
+        Use a Conventional Commit title such as feat(api): add route planning.
+        Keep the title concise and descriptive.
