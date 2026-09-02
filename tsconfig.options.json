@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    // Runtime and language target
+    "target": "es2023",
+    "lib": ["ESNext", "ESNext.Temporal"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "moduleDetection": "force",
+
+    // Module interoperability and resolution
+    "allowJs": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "resolveJsonModule": true,
+
+    // Type checking
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+
+    // Build and output
+    "composite": true,
+    "incremental": true,
+    "noEmit": true,
+    "skipLibCheck": true
+  }
+}
