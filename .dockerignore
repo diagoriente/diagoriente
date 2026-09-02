@@ -1,0 +1,32 @@
+# Dependencies and package-manager data
+node_modules/
+apm_modules/
+
+# Moon caches and generated Docker scaffolding
+.moon/cache/
+.moon/docker/
+.moon/hooks/
+
+# Version control, IDE, and agent metadata
+.git/
+.idea/
+.vscode/
+.agents/
+.codex/
+.claude/
+.github/
+**/.DS_Store
+
+# Build and test output
+**/dist/
+**/coverage/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Docker metadata
+Dockerfile
+.dockerignore
+**/Dockerfile
