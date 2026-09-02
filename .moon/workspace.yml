@@ -10,3 +10,9 @@ vcs:
       - "moon run :lint"
     commit-msg:
       - "pnpm exec commitlint --edit $ARG1"
+
+docker:
+  scaffold:
+    configsPhaseGlobs:
+      - ".prototools"
+      - "patches/**/*"
