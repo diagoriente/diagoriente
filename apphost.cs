@@ -13,6 +13,7 @@ var redis = builder.AddRedis("redis")
   .WithImageTag("alpine");
 
 var postgres = builder.AddPostgres("postgres")
+  .WithLifetime(ContainerLifetime.Persistent)
   .WithDataVolume()
   .WithPgWeb();
 
