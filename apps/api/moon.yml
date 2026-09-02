@@ -31,6 +31,13 @@ tasks:
     outputs:
       - "dist/"
 
+  typecheck:
+    command: "tsc --noEmit"
+    inputs:
+      - "@group(sources)"
+      - "@group(tests)"
+      - "@group(configs)"
+
   start:
     command: "node dist/main"
     deps:
