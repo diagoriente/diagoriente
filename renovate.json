@@ -1,4 +1,49 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:best-practices"]
+  "extends": ["config:best-practices"],
+  "dependencyDashboard": true,
+  "rebaseWhen": "behind-base-branch",
+  "rangeStrategy": "pin",
+  "minimumReleaseAge": "3 days",
+  "packageRules": [
+    {
+      "description": "Automerge safe patch updates after CI",
+      "matchUpdateTypes": ["patch", "pin", "digest"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true,
+      "automergeType": "pr",
+      "platformAutomerge": true,
+      "ignoreTests": false
+    },
+    {
+      "description": "Group non-major dev dependencies to reduce PR noise",
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["minor"],
+      "groupName": "development dependencies (non-major)"
+    },
+    {
+      "description": "Exclude runtime dependencies from automerge",
+      "matchDepTypes": ["dependencies", "optionalDependencies", "peerDependencies"],
+      "automerge": false
+    },
+    {
+      "description": "Require review for security-sensitive tooling",
+      "matchPackageNames": ["typescript", "oxlint", "oxfmt", "/^@types\\//", "/^eslint/"],
+      "automerge": false,
+      "labels": ["dependencies", "needs-review"]
+    },
+    {
+      "description": "Require manual dashboard approval for major updates",
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "dependencyDashboardApproval": true
+    }
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on monday"],
+    "automerge": true,
+    "automergeType": "pr",
+    "platformAutomerge": false
+  }
 }
