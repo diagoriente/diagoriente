@@ -1,10 +1,12 @@
 $schema: ./cache/schemas/workspace.json
 
-projects: ["apps/*", "packages/*"]
+projects: [".", "apps/*", "packages/*"]
 
 vcs:
   defaultBranch: "master"
   provider: "github"
   hooks:
+    pre-commit:
+      - "moon run :lint"
     commit-msg:
       - "pnpm exec commitlint --edit $ARG1"
