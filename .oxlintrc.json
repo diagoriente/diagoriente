@@ -17,5 +17,6 @@
   },
   "env": {
     "builtin": true
-  }
+  },
+  "ignorePatterns": [".agents/skills/", ".claude/skills/"]
 }
