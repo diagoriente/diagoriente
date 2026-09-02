@@ -43,6 +43,8 @@ tasks:
       - "@group(sources)"
       - "@group(tests)"
       - "@group(configs)"
+    options:
+      runInCI: false
 
   test-watch:
     command: "vitest"
