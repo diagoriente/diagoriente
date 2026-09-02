@@ -11,7 +11,7 @@
     "@nestjs/swagger": "12.0.1",
     "@nestjs/terminus": "12.0.0",
     "@scalar/nestjs-api-reference": "1.2.17",
-    "nestjs-pino": "5.0.0",
+    "nestjs-pino": "5.1.0",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.2",
     "zod": "4.5.4"
