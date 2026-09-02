@@ -21,7 +21,7 @@ var database = postgres.AddDatabase("zenith");
 
 builder.AddExecutable("api", "moon", ".", "run", "api:dev")
   .WithHttpEndpoint(targetPort: 3000, env: "PORT")
-  .WithHttpHealthCheck("/")
+  .WithHttpHealthCheck("/health")
   .WithExternalHttpEndpoints()
   .WithReference(redis)
   .WithReference(database);
