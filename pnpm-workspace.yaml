@@ -8,3 +8,6 @@ configDependencies:
 packages:
   - "apps/*"
   - "packages/*"
+
+patchedDependencies:
+  "@nestjs/cli@12.0.0": patches/@nestjs__cli@12.0.0.patch
