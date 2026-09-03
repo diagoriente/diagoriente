@@ -24,7 +24,7 @@ async function bootstrap() {
 
   app.use("/docs", apiReference({ url: "/openapi.json" }));
 
-  await app.listen(port);
+  await app.listen(port, "0.0.0.0");
 }
 
 await bootstrap();
