@@ -55,4 +55,5 @@ ENV NODE_ENV=production
 
 COPY --link --from=build /tmp/deploy /app
 
+EXPOSE 3000
 CMD ["dist/main.js"]
