@@ -11,7 +11,8 @@ RUN apt-get update \
     && apt-get install --no-install-recommends --yes ca-certificates curl xz-utils \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -fsSL https://moonrepo.dev/install/moon.sh | bash
+ADD --checksum=sha256:4dee48598dc3acafbe10b068da63e237f4b3d045792773c2cdb2e81994d9a43d https://moonrepo.dev/install/moon.sh /tmp
+RUN bash /tmp/moon.sh
 ENV PATH="/root/.moon/bin:/root/.proto/bin:$PATH"
 
 # -----------------------------------------------------------------------------
