@@ -1,0 +1,41 @@
+name: APM Audit
+on:
+  pull_request:
+    paths:
+      - "apm.yml"
+      - "apm.lock.yaml"
+      - ".apm/**"
+      - ".github/**"
+      - ".agents/**"
+      - ".claude/**"
+      - ".codex/**"
+      - ".cursor/**"
+  schedule:
+    - cron: "0 6 * * *" # 06:00 UTC daily
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: microsoft/apm-action@d723bb64ed70c135bbaf87d126b721dd2dae0439 # v1.10.0
+        with:
+          apm-version: "0.30.0"
+          setup-only: true
+      - run: apm audit --ci --no-cache -o apm-audit.sarif
+      - name: Upload SARIF
+        if: >
+          always() &&
+          (
+            github.event_name == 'schedule' ||
+            github.event_name == 'workflow_dispatch' ||
+            github.event.pull_request.head.repo.full_name == github.repository
+          )
+        uses: github/codeql-action/upload-sarif@cdf488f595d80d6e07e03d4674febd5ab45fa938 # v4.37.9
+        with:
+          sarif_file: apm-audit.sarif
+          category: apm-audit
