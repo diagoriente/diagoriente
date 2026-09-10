@@ -7,10 +7,10 @@
     "@commitlint/cli": "21.2.2",
     "@commitlint/config-conventional": "21.2.2",
     "@commitlint/config-pnpm-scopes": "21.2.2",
-    "@types/node": "26.4.1",
+    "@types/node": "26.5.0",
     "@typescript/native": "npm:typescript@7.0.2",
-    "oxfmt": "0.66.0",
-    "oxlint": "1.81.0",
+    "oxfmt": "0.67.0",
+    "oxlint": "1.82.0",
     "oxlint-tsgolint": "7.0.2001",
     "typescript": "npm:@typescript/typescript6@6.0.2"
   }
