@@ -48,7 +48,7 @@ RUN --mount=type=cache,id=moon-proto,target=/root/.proto,sharing=locked \
 # Runtime
 # -----------------------------------------------------------------------------
 
-FROM gcr.io/distroless/nodejs26-debian13:nonroot@sha256:10ec8cb93ef461563da50d4eb8dfac7d048783826825bf5b07510c2f34c14315 AS start
+FROM gcr.io/distroless/nodejs26-debian13:nonroot@sha256:f7e3539249fa844f7019255d3ed1acb5faf626006607a602f8a24d59f0a97c6c AS start
 WORKDIR /app
 
 ENV NODE_ENV=production
