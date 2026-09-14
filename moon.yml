@@ -3,35 +3,19 @@ id: "root"
 language: javascript
 layer: tool
 
-fileGroups:
-  sources:
-    - "**/*"
-    - "!**/.moon/cache/**"
-    - "!**/.agents/**"
-    - "!**/.claude/**"
-    - "!**/.codex/**"
-    - "!**/apm_modules/**"
-    - "!**/node_modules/**"
-    - "!**/dist/**"
-    - "!**/coverage/**"
-
 tasks:
   lint:
     command: "oxlint ."
-    inputs:
-      - "@group(sources)"
+    preset: utility
 
   lint-fix:
     command: "oxlint --fix ."
-    options:
-      cache: false
+    preset: utility
 
   format:
     command: "oxfmt ."
-    options:
-      cache: false
+    preset: utility
 
   format-check:
     command: "oxfmt --check ."
-    inputs:
-      - "@group(sources)"
+    preset: utility
