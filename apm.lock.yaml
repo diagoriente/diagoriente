@@ -2514,6 +2514,42 @@ deployments:
   - obra/superpowers
   active_owner: obra/superpowers
   content_hash: sha256:88a060272ca8047e0d1cd73a016e1cebba8396807a44be1e296d7c02dcbb9934
+- kind: uri
+  target: mcp
+  value: aspire
+  runtime: claude
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: uri
+  target: mcp
+  value: moon
+  runtime: claude
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: uri
+  target: mcp
+  value: aspire
+  runtime: codex
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: uri
+  target: mcp
+  value: moon
+  runtime: codex
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
 mcp_servers:
 - aspire
 - moon
@@ -2535,4 +2571,10 @@ mcp_configs:
     - mcp
     registry: false
     command: moon
-mcp_target_servers: {}
+mcp_target_servers:
+  claude:
+  - aspire
+  - moon
+  codex:
+  - aspire
+  - moon
