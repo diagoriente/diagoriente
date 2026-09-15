@@ -25,6 +25,8 @@ jobs:
     uses: ./.github/workflows/_reusable-docker-build.yml
     with:
       attestations: false
+    secrets:
+      buildfetch-token: ${{ secrets.BUILDFETCH_TOKEN_READONLY }}
     permissions:
       contents: read
       packages: write

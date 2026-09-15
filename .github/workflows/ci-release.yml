@@ -43,6 +43,8 @@ jobs:
     uses: ./.github/workflows/_reusable-docker-build.yml
     with:
       attestations: true
+    secrets:
+      buildfetch-token: ${{ secrets.BUILDFETCH_TOKEN }}
     permissions:
       contents: read
       packages: write

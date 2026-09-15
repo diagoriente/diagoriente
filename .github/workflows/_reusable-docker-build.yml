@@ -6,6 +6,9 @@ on:
       attestations:
         required: true
         type: boolean
+    secrets:
+      buildfetch-token:
+        required: true
 
 permissions: {}
 
@@ -71,5 +74,7 @@ jobs:
             type=gha,scope=${{ matrix.name }}-${{ env.PARENT_CACHE_SCOPE }}
             type=gha,scope=${{ matrix.name }}-${{ env.CACHE_SCOPE }}
           cache-to: type=gha,mode=max,scope=${{ matrix.name }}-${{ env.CACHE_SCOPE }}
+          secrets: |
+            BUILDFETCH_TOKEN=${{ secrets.buildfetch-token }}
           provenance: ${{ inputs.attestations && 'mode=max' || false }}
           sbom: ${{ inputs.attestations }}

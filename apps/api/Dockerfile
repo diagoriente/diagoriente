@@ -32,13 +32,15 @@ FROM base AS build
 
 COPY --link --from=skeleton /app/.moon/docker/configs .
 
-RUN --mount=type=cache,id=moon-proto,target=/root/.proto,sharing=locked \
+RUN --mount=type=secret,id=BUILDFETCH_TOKEN,env=BUILDFETCH_TOKEN \
+    --mount=type=cache,id=moon-proto,target=/root/.proto,sharing=locked \
     --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store,sharing=locked \
     moon docker setup
 
 COPY --link --from=skeleton /app/.moon/docker/sources .
 
-RUN --mount=type=cache,id=moon-proto,target=/root/.proto,sharing=locked \
+RUN --mount=type=secret,id=BUILDFETCH_TOKEN,env=BUILDFETCH_TOKEN \
+    --mount=type=cache,id=moon-proto,target=/root/.proto,sharing=locked \
     --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store,sharing=locked \
     moon run api:build \
     && moon docker prune \
