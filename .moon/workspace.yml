@@ -16,3 +16,11 @@ docker:
     configsPhaseGlobs:
       - ".prototools"
       - "patches/**/*"
+
+remote:
+  host: grpcs://cache.eu-central-a.buildfetch.com
+  auth:
+    token: "BUILDFETCH_TOKEN"
+  cache:
+    instanceName: reapi/bazel/IxgUTK
+    localReadOnly: true
