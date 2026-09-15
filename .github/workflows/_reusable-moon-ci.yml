@@ -1,0 +1,42 @@
+name: Reusable Moon CI
+
+on:
+  workflow_call:
+    secrets:
+      buildfetch-token:
+        required: true
+
+permissions: {}
+
+jobs:
+  moon-ci:
+    name: Moon CI
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          filter: blob:none
+          persist-credentials: false
+
+      - name: Set up toolchain
+        uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
+        with:
+          auto-install: true
+          proto-version: "0.62.2" # renovate: datasource=github-releases depName=moonrepo/proto extractVersion=^v(?<version>.*)$
+
+      - name: Run Moon CI
+        run: moon ci
+        env:
+          BUILDFETCH_TOKEN: ${{ secrets.buildfetch-token }}
+
+      - uses: moonrepo/run-report-action@bbe7e99bf2aca819ec660ec01fc59d84bdd492d6 # v1.10.0
+        if: success() || failure()
+        with:
+          access-token: ${{ secrets.GITHUB_TOKEN }}

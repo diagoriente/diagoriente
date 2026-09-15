@@ -1,0 +1,34 @@
+name: CI (master)
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ci-master-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  moon-ci:
+    if: github.ref == 'refs/heads/master'
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    uses: ./.github/workflows/_reusable-moon-ci.yml
+    secrets:
+      buildfetch-token: ${{ secrets.BUILDFETCH_TOKEN }}
+
+  docker-build:
+    if: github.ref == 'refs/heads/master'
+    needs: moon-ci
+    uses: ./.github/workflows/_reusable-docker-build.yml
+    with:
+      attestations: true
+    permissions:
+      contents: read
+      packages: write
+      id-token: write
