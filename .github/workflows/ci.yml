@@ -33,8 +33,17 @@ jobs:
           auto-install: true
           proto-version: "0.61.2" # renovate: datasource=github-releases depName=moonrepo/proto extractVersion=^v(?<version>.*)$
 
-      - name: Run Moon CI
+      - name: Run Moon CI (for pull requests)
+        if: github.event_name == 'pull_request'
         run: moon ci
+        env:
+          BUILDFETCH_TOKEN: ${{ secrets.BUILDFETCH_TOKEN_READONLY }}
+
+      - name: Run Moon CI (for master branch)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: moon ci
+        env:
+          BUILDFETCH_TOKEN: ${{ secrets.BUILDFETCH_TOKEN }}
 
       - uses: moonrepo/run-report-action@bbe7e99bf2aca819ec660ec01fc59d84bdd492d6 # v1.10.0
         if: success() || failure()
