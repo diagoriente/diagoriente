@@ -1,0 +1,14 @@
+inheritedBy:
+  language: typescript
+
+implicitInputs:
+  - "/pnpm-lock.yaml"
+
+tasks:
+  typecheck:
+    command: "tsc --noEmit"
+    inputs:
+      - "**/*.ts"
+      - "**/*.tsx"
+      - "tsconfig*.json"
+      - "/tsconfig*.json"
