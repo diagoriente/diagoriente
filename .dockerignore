@@ -20,6 +20,7 @@ apm_modules/
 # Build and test output
 **/dist/
 **/coverage/
+**/*.tsbuildinfo
 
 # Environment files
 .env
@@ -30,3 +31,8 @@ apm_modules/
 Dockerfile
 .dockerignore
 **/Dockerfile
+
+# Repository extra content
+docs/
+apphost.cs
+aspire.config.json
