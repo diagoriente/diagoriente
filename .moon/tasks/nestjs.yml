@@ -34,6 +34,8 @@ tasks:
     command: "node dist/main"
     deps:
       - "build"
+    env:
+      NODE_ENV: "production"
     preset: server
 
   test:
