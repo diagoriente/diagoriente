@@ -1115,6 +1115,24 @@ deployments:
   - .
   active_owner: .
   content_hash: null
+- kind: uri
+  target: mcp
+  value: aspire
+  runtime: vscode
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
+- kind: uri
+  target: mcp
+  value: moon
+  runtime: vscode
+  scope: project
+  owners:
+  - .
+  active_owner: .
+  content_hash: null
 mcp_servers:
 - aspire
 - moon
@@ -1141,5 +1159,8 @@ mcp_target_servers:
   - aspire
   - moon
   codex:
+  - aspire
+  - moon
+  vscode:
   - aspire
   - moon
