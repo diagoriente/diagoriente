@@ -8,22 +8,24 @@ import { LoggerModule } from "nestjs-pino";
       imports: [ConfigModule],
       inject: [ConfigService],
       providers: [],
-      useFactory: (configService: ConfigService) => {
+      useFactory: async (configService: ConfigService) => {
         const isDevelopment = configService.getOrThrow<string>("NODE_ENV") === "development";
+
+        let prettyStream;
+
+        if (isDevelopment) {
+          const { default: pinoPretty } = await import("pino-pretty");
+          prettyStream = pinoPretty({
+            colorize: true,
+            singleLine: true,
+            translateTime: "SYS:standard",
+          });
+        }
 
         return {
           pinoHttp: {
             level: configService.getOrThrow<string>("LOG_LEVEL"),
-            transport: isDevelopment
-              ? {
-                  target: "pino-pretty",
-                  options: {
-                    colorize: true,
-                    singleLine: true,
-                    translateTime: "SYS:standard",
-                  },
-                }
-              : undefined,
+            stream: prettyStream,
             serializers: {
               req: (request) => ({
                 id: request.id,
