@@ -7,7 +7,7 @@ dependencies:
   resolved_commit: 842c4fb8d9ff5f89bf3e5f6f16739a728b5ba77e
   resolved_ref: v0.0.2
   version: 0.0.2
-  package_type: marketplace_plugin
+  package_type: skill_bundle
   deployed_files:
   - .agents/skills/aspire
   - .agents/skills/aspire-deployment
