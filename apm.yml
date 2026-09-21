@@ -10,7 +10,7 @@ targets:
 
 dependencies:
   apm:
-    - microsoft/aspire-skills#e9725ad3acb28c01c77b4afba7ec87fbfaa7e21a
+    - microsoft/aspire-skills#v0.0.2
   mcp:
     - name: "moon"
       registry: false
