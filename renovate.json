@@ -4,7 +4,7 @@
   "dependencyDashboard": true,
   "rebaseWhen": "behind-base-branch",
   "rangeStrategy": "pin",
-  "minimumReleaseAge": "3 days",
+  "minimumReleaseAge": "24 hours",
   "packageRules": [
     {
       "description": "Automerge safe patch updates after CI",
