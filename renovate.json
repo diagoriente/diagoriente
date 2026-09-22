@@ -5,6 +5,7 @@
   "rebaseWhen": "behind-base-branch",
   "rangeStrategy": "pin",
   "minimumReleaseAge": "24 hours",
+  "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
     {
       "description": "Automerge safe patch updates after CI",
