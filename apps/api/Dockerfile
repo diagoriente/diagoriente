@@ -4,7 +4,7 @@
 # Base
 # -----------------------------------------------------------------------------
 
-FROM node:26.8.2-trixie-slim@sha256:f7bb8247fdb16250dbec7fd0e24f091c6f5f0a29d256f3aef5816a7a369166b2 AS base
+FROM node:26.9.0-trixie-slim@sha256:3a771f83944bb763050c23c0225c260638c4b7899e7a72485ef75e5e570499e5 AS base
 WORKDIR /app
 
 RUN apt-get update \
