@@ -29,7 +29,7 @@ jobs:
         uses: moonrepo/setup-toolchain@261c62cb5b0f580c7be7c8cd0f023a2e96756095 # v0.6.4
         with:
           auto-install: true
-          proto-version: "0.62.2" # renovate: datasource=github-releases depName=moonrepo/proto extractVersion=^v(?<version>.*)$
+          proto-version: "0.62.3" # renovate: datasource=github-releases depName=moonrepo/proto extractVersion=^v(?<version>.*)$
 
       - name: Run Moon CI
         run: moon ci
