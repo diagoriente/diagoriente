@@ -50,7 +50,7 @@ RUN --mount=type=secret,id=BUILDFETCH_TOKEN,env=BUILDFETCH_TOKEN \
 # Runtime
 # -----------------------------------------------------------------------------
 
-FROM gcr.io/distroless/nodejs26-debian13:nonroot@sha256:bf3d7b068299d84941df498b4b2f9bbb6a48d3135001399531bb4048311575de AS start
+FROM gcr.io/distroless/nodejs26-debian13:nonroot@sha256:afc6657a4b662f9cb69ca892b0596e55d6ef81a10e83ee8887b13f602877df89 AS start
 WORKDIR /app
 
 ENV NODE_ENV=production
