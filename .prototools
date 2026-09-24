@@ -9,3 +9,6 @@ dotnet = "11.0.100-rc.1.26425.128"
 apm = "file://./tools/proto-plugins/apm/plugin.toml"
 aspire = "file://./tools/proto-plugins/aspire/plugin.toml"
 dotnet = "file://./tools/proto-plugins/dotnet/plugin.toml"
+
+[settings]
+telemetry = false

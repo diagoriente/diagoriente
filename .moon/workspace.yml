@@ -24,3 +24,5 @@ remote:
   cache:
     instanceName: reapi/bazel/IxgUTK
     localReadOnly: true
+
+telemetry: false
