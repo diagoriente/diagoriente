@@ -15,7 +15,7 @@ description: >-
 license: MIT
 metadata:
   author: Microsoft
-  version: "0.0.2"
+  version: "0.0.3"
 ---
 
 # Aspire Init
@@ -153,4 +153,4 @@ copy and warn.
 - [init-workflow.md](references/init-workflow.md) — `aspire init` flow, `aspire.config.json`
   layout, and `aspireify` handoff
 - [aspire-13-5-breaking-changes.md](https://github.com/microsoft/aspire-skills/blob/main/skills/aspire/references/aspire-13-5-breaking-changes.md) —
-  13.5.3 versions, migrations, and CLI-bundle behavior
+  13.5 migrations, CLI-bundle behavior, and fixes for affected releases
