@@ -26,3 +26,4 @@ remote:
     localReadOnly: true
 
 telemetry: false
+unstable_daemon: true
