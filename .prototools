@@ -3,7 +3,7 @@ node = "26.10.0"
 pnpm = "12.6.0"
 apm = "0.31.0"
 aspire = "13.5.4"
-dotnet = "10.0.400"
+dotnet = "11.0.100-rc.1.26425.128"
 
 [plugins.tools]
 apm = "file://./tools/proto-plugins/apm/plugin.toml"
