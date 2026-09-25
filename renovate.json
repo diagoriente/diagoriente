@@ -8,6 +8,12 @@
   "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
     {
+      "description": "Disable lock file maintenance for APM (unstable)",
+      "matchManagers": ["apm"],
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "enabled": false
+    },
+    {
       "description": "Automerge safe patch updates after CI",
       "matchUpdateTypes": ["patch", "pin", "digest"],
       "matchCurrentVersion": "!/^0/",
