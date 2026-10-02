@@ -4,6 +4,7 @@ javascript:
   packageManager: "pnpm"
   syncPackageManagerField: false
   syncProjectWorkspaceDependencies: true
+  dedupeOnLockfileChange: false
 
 node: {}
 

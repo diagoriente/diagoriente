@@ -1,6 +1,8 @@
 allowBuilds:
   "@scarf/scarf": false
 
+autoDedupe: true
+
 configDependencies:
   "@pnpm/plugin-better-defaults": "0.3.0"
   "@pnpm/plugin-trusted-deps": "0.2.2"
