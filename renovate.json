@@ -5,6 +5,8 @@
   "rebaseWhen": "behind-base-branch",
   "rangeStrategy": "pin",
   "minimumReleaseAge": "24 hours",
+  "allowScripts": true,
+  "ignoreScripts": false,
   "postUpdateOptions": ["pnpmDedupe"],
   "packageRules": [
     {
