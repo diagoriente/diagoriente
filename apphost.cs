@@ -1,7 +1,7 @@
-#:sdk Aspire.AppHost.Sdk@13.5.4
-#:package Aspire.Hosting.JavaScript@13.5.4
-#:package Aspire.Hosting.Redis@13.5.4
-#:package Aspire.Hosting.PostgreSQL@13.5.4
+#:sdk Aspire.AppHost.Sdk@13.6.0
+#:package Aspire.Hosting.JavaScript@13.6.0
+#:package Aspire.Hosting.Redis@13.6.0
+#:package Aspire.Hosting.PostgreSQL@13.6.0
 #:property AspireUseCliBundle=true
 
 using Aspire.Hosting;

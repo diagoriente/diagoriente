@@ -2,7 +2,7 @@ moon = "2.5.6"
 node = "26.10.0"
 pnpm = "12.8.2"
 apm = "0.32.0"
-aspire = "13.5.4"
+aspire = "13.6.0"
 dotnet = "11.0.100-rc.1.26425.128"
 
 [plugins.tools]
