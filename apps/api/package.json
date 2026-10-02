@@ -20,7 +20,7 @@
     "@nestjs/cli": "12.0.7",
     "@nestjs/schematics": "12.0.5",
     "@nestjs/testing": "12.1.0",
-    "@rspack/core": "2.2.7",
+    "@rspack/core": "2.2.8",
     "@types/express": "5.0.6",
     "@types/supertest": "7.2.1",
     "@vitest/coverage-v8": "5.0.2",
